@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: calc(100vmax / 1600 * 100); //100vmax / 1600 * 100;
+  @media (max-width: 992px) {
+    font-size: 60px;
+  }
+}
+body {
+  min-height: 100vh;
+  // display: flex; // xóa
+  justify-content: center;
+  color: #222;
+  background-image: linear-gradient(45deg, #cde3ff, #f1e8ff);
+  font-size: 0.26rem;
+  font-family: "Space Grotesk", sans-serif;
+  padding: 5% 7%; //0.5rem 1rem;
+}
+
+.wrapper {
+  width: 100%;
+}
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.2em;
+  margin-bottom: 0.5rem;
+}
+
+.agenda-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.3rem;
+}
+.agenda-list {
+  border-left: 10px solid #667cff;
+  text-align: left;
+  height: 100px;
+}
+.agenda-item {
+}
+
+.description {
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1em;
+  margin-bottom: 0.3rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-player {
+  background: #667cff;
+  border-radius: 999px;
+  box-shadow: #667cff 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.button-player:hover {
+  background-color: #002ead;
+  transition: 0.5s;
+}
+.item {
+  padding: 15px;
+  &:hover {
+    transform: translateX(1%);
+  }
+}
+.item-wrapper {
+  position: relative;
+  margin-bottom: 0.3rem;
+  border-radius: 0.2rem;
+  box-shadow: 3px 3px 10px #0002;
+  background-color: #fff;
+  transition: all 0.3s;
+  overflow: hidden;
+  z-index: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: radial-gradient(#fff2b3 50%, #fff0 0);
+    z-index: -1;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+  &.active {
+    &:before {
+      transform: scale(8);
+      filter: blur(8px);
+    }
+    .item-title {
+      text-decoration: underline;
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+.item-title {
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.item-id {
+  padding: 0.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateX(1%);
+  }
+}
+
+.item-title,
+.item-id {
+  display: inline;
+}
+
+.item-description {
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+
+    transform: translateX(1%);
+  }
+}
+.content-outer {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.content {
+  padding: 0.2rem;
+  line-height: 1.7;
+}
+
+.countdown-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.3rem;
+}
+
+.countdown-clock {
+  text-align: center;
+}
+
+.ctas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.cta-call,
+.cta-mail {
+  display: inline;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #646cff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #222;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.footer {
+  background-color: #f1e8ff;
+}
